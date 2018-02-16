@@ -5,6 +5,9 @@ html {
 
 body {
     background-image: url("../imgs/cave.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     color: #fff;
