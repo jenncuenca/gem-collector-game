@@ -1,9 +1,18 @@
 $(document).ready(function() {
  
-// Variables
+// Win-Loss Variables
 var wins = 0;
 var loses = 0;
-var userGemTotal = 0;
+
+//Player's Score Variable 
+var userGemTotal = 0; // sum of all gem values
+$("#playerScore").text(userGemTotal);
+
+// Gem Value Variables
+var greenGem = Math.floor(Math.random() * 12) + 1;
+var pinkGem = Math.floor(Math.random() * 12) + 1;
+var blueGem = Math.floor(Math.random() * 12) + 1;
+var orangeGem = Math.floor(Math.random() * 12) + 1;
 
 //Random Number gets generated
 var numToBeMatched = 19 + Math.floor(Math.random()*120);
@@ -25,27 +34,27 @@ else if (userGemTotal >= numToBeMatched){
 
 //Gem 1
 $("#greenGem").on("click", function(){
-    var gemValue = Math.floor(Math.random() * 12) + 1;
-    $("#playerScore").text(gemValue);
+    userGemTotal = userGemTotal + greenGem;
+    $("#playerScore").text(userGemTotal);
   });
 
 //Gem 2
 $("#pinkGem").on("click", function(){
-    var gemValue = Math.floor(Math.random() * 12) + 1;
-    $("#playerScore").text(gemValue);
+    userGemTotal = userGemTotal + pinkGem;
+    $("#playerScore").text(userGemTotal);
   });
 
 //Gem 3
 
 $("#blueGem").on("click", function(){
-    var gemValue = Math.floor(Math.random() * 12) + 1;
-    $("#playerScore").text(gemValue);
+    userGemTotal = userGemTotal + blueGem;
+    $("#playerScore").text(userGemTotal);
   });
 
 //Gem 4
 $("#orangeGem").on("click", function(){
-    var gemValue = Math.floor(Math.random() * 12) + 1;
-    $("#playerScore").text(gemValue);
+    userGemTotal = userGemTotal + orangeGem;
+    $("#playerScore").text(userGemTotal);
   });
 
 //score tracking
