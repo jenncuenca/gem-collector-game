@@ -5,8 +5,10 @@ html {
 
 body {
     background-image: url("../imgs/cave.png");
-    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat:  no-repeat;
     background-attachment: fixed;
+    background-size:  cover;
     
     /* Margin bottom by footer height */
     margin-bottom: 60px;
@@ -37,7 +39,7 @@ h4 {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer */

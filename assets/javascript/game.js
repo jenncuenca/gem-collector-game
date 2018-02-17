@@ -27,12 +27,15 @@ function win(){
 }
 
 function loss(){
- //LOSS actions: If user Gem clicks are more than Randomly Generated Number
-    alert("You lose!"); // informs user of loss
-    losses += 1; // losses increase by 1.
-    $("#losses").text("LOSSES: " + lose);
-    gameReset();
-}
+     //LOSS actions: If user Gem clicks are more than Randomly Generated Number
+        alert("You lose!"); // informs user of loss
+        loses += 1; // losses increase by 1.
+        console.log()
+        $("#losses").text("LOSSES: " +  loses);
+        gameReset();
+
+        
+    }
 
 
 // gems generate a random number
