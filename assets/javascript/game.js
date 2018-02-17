@@ -40,14 +40,15 @@ function loss(){
 //Gem 1
 $("#greenGem").on("click", function(){
     userGemTotal += greenGem;
+    
     $("#playerScore").text(userGemTotal);
 
     // win-loss conditions
     if (userGemTotal == numToBeMatched){
         win();
       }
-    else if (userGemTotal > numToBeMatched){
-        lose();
+   else if (userGemTotal > numToBeMatched){
+        loss();
       } 
   });
 
@@ -61,8 +62,8 @@ $("#pinkGem").on("click", function(){
         win();
           }
 
-    else if (userGemTotal > numToBeMatched){
-        lose();
+    if (userGemTotal > numToBeMatched){
+        loss();
           } 
    
   });
@@ -76,8 +77,8 @@ $("#blueGem").on("click", function(){
     if (userGemTotal == numToBeMatched){
         win();
       }
-    else if (userGemTotal > numToBeMatched){
-        lose();
+    if (userGemTotal > numToBeMatched){
+        loss();
       } 
    
   });
@@ -91,8 +92,8 @@ $("#orangeGem").on("click", function(){
     if (userGemTotal == numToBeMatched){
         win();
       }
-    else if (userGemTotal > numToBeMatched){
-        lose();
+    if (userGemTotal > numToBeMatched){
+        loss();
       }    
   });
 
