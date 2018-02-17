@@ -21,12 +21,14 @@ $("#random-number").text(numToBeMatched);
 //WIN CONDITION: If user Gem clicks match the Randomly Generated Number 
 if (userGemTotal === numToBeMatched){
     wins += 1; // wins increase by 1.
+    $("#wins").text("WINS: " + wins);
     alert("Congratulations! YOU WIN!!"); // informs user of win
 }
 
 //LOSS CONDITION: If user Gem clicks are more than Randomly Generated Number
 else if (userGemTotal >= numToBeMatched){
     losses += 1; // losses increase by 1.
+    $("#losses").text("LOSSES: " + lose);
     alert("You lose!"); // informs user of loss
 }
 
@@ -57,6 +59,21 @@ $("#orangeGem").on("click", function(){
     $("#playerScore").text(userGemTotal);
   });
 
-//score tracking
+//Game Reset 
+function gameReset(){
+    //New Random Number
+    numToBeMatched = 19 + Math.floor(Math.random()*120);
+    $("#random-number").text(numToBeMatched);
+
+    //New Gem Totals
+    greenGem = Math.floor(Math.random() * 12) + 1;
+    pinkGem = Math.floor(Math.random() * 12) + 1;
+    blueGem = Math.floor(Math.random() * 12) + 1;
+    orangeGem = Math.floor(Math.random() * 12) + 1;
+
+    //Player Score Cleared
+    userGemTotal = 0;
+    $("#playerScore").text(userGemTotal);
+}
 
 });
