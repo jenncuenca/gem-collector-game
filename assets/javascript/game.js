@@ -15,49 +15,87 @@ var blueGem = Math.floor(Math.random() * 12) + 1;
 var orangeGem = Math.floor(Math.random() * 12) + 1;
 
 //Random Number gets generated
-var numToBeMatched = 19 + Math.floor(Math.random()*120);
+var numToBeMatched = 19 + Math.floor(Math.random()*101)+19;
 $("#random-number").text(numToBeMatched);
 
-//WIN CONDITION: If user Gem clicks match the Randomly Generated Number 
-if (userGemTotal === numToBeMatched){
+function win(){
+//WIN actions: If user Gem clicks match the Randomly Generated Number 
+    alert("Congratulations! YOU WIN!!"); // informs user of win
     wins += 1; // wins increase by 1.
     $("#wins").text("WINS: " + wins);
-    alert("Congratulations! YOU WIN!!"); // informs user of win
+    gameReset();
 }
 
-//LOSS CONDITION: If user Gem clicks are more than Randomly Generated Number
-else if (userGemTotal >= numToBeMatched){
+function loss(){
+ //LOSS actions: If user Gem clicks are more than Randomly Generated Number
+    alert("You lose!"); // informs user of loss
     losses += 1; // losses increase by 1.
     $("#losses").text("LOSSES: " + lose);
-    alert("You lose!"); // informs user of loss
+    gameReset();
 }
+
 
 // gems generate a random number
 
 //Gem 1
 $("#greenGem").on("click", function(){
-    userGemTotal = userGemTotal + greenGem;
+    userGemTotal += greenGem;
     $("#playerScore").text(userGemTotal);
+
+    // win-loss conditions
+    if (userGemTotal == numToBeMatched){
+        win();
+      }
+    else if (userGemTotal > numToBeMatched){
+        lose();
+      } 
   });
 
 //Gem 2
 $("#pinkGem").on("click", function(){
-    userGemTotal = userGemTotal + pinkGem;
+    userGemTotal += pinkGem;
     $("#playerScore").text(userGemTotal);
+
+    // win-loss conditions
+    if (userGemTotal == numToBeMatched){
+        win();
+          }
+
+    else if (userGemTotal > numToBeMatched){
+        lose();
+          } 
+   
   });
 
 //Gem 3
-
 $("#blueGem").on("click", function(){
-    userGemTotal = userGemTotal + blueGem;
+    userGemTotal += blueGem;
     $("#playerScore").text(userGemTotal);
+
+    // win-loss conditions
+    if (userGemTotal == numToBeMatched){
+        win();
+      }
+    else if (userGemTotal > numToBeMatched){
+        lose();
+      } 
+   
   });
 
 //Gem 4
 $("#orangeGem").on("click", function(){
-    userGemTotal = userGemTotal + orangeGem;
+    userGemTotal += orangeGem;
     $("#playerScore").text(userGemTotal);
+
+    // win-loss conditions
+    if (userGemTotal == numToBeMatched){
+        win();
+      }
+    else if (userGemTotal > numToBeMatched){
+        lose();
+      }    
   });
+
 
 //Game Reset 
 function gameReset(){
