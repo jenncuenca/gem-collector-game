@@ -7,16 +7,17 @@ body {
     background-image: url("../imgs/cave.png");
     background-position: center center;
     background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size:  cover;
+	background-attachment: fixed;
+	background-size:  cover;
     
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     color: #fff;
 }
 
-.row {
-    padding-bottom: 3%;
+.col-sm-5 {
+    padding: 3%;
+    margin: 1%;
 }
 
 h4 {
@@ -27,6 +28,7 @@ h4 {
 .gem {
     max-width: 153px;
     max-height: 123px;
+    padding: 2%;
 }
 
 #gems {
@@ -38,14 +40,19 @@ h4 {
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+#score {
+    padding: 2%;
+}
+
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer */
     height: 60px;
-    background-color: #2421ef;
+    border-top: solid 5px #7e8edb;
+    background-color: #341c50;
     text-align: center;
     margin-top: 5%;
-    color: #fff;
+    color: #eabafa;
   }

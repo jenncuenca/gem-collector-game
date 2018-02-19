@@ -34,7 +34,6 @@ function loss(){
         $("#losses").text("LOSSES: " +  loses);
         gameReset();
 
-        
     }
 
 
@@ -50,7 +49,7 @@ $("#greenGem").on("click", function(){
     if (userGemTotal == numToBeMatched){
         win();
       }
-   else if (userGemTotal > numToBeMatched){
+   if (userGemTotal > numToBeMatched){
         loss();
       } 
   });
