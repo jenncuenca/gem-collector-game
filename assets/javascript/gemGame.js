@@ -28,7 +28,7 @@ function win(){
 }
 
 function loss(){
-     //LOSS actions: If user Gem clicks are more than Randomly Generated Number
+ //LOSS actions: If user Gem clicks are more than Randomly Generated Number
         alert("You lose!"); // informs user of loss
         loses += 1; // losses increase by 1.
         console.log()
@@ -36,12 +36,13 @@ function loss(){
         gameReset();
     }
 
+//Game Reset 
 function gameReset(){
     //New Random Number
     numToBeMatched = 19 + Math.floor(Math.random()*120);
     $("#random-number").text(numToBeMatched);
 
-    //New Gem Totals
+     //New Gem Totals
     greenGem = Math.floor(Math.random() * 12) + 1;
     pinkGem = Math.floor(Math.random() * 12) + 1;
     blueGem = Math.floor(Math.random() * 12) + 1;
@@ -136,7 +137,7 @@ $("#orangeGem").on("click", function(){
   });
 */
 
-//Game Reset 
+
 
 
 });
