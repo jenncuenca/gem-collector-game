@@ -56,7 +56,7 @@ function gameReset(){
 
 // gems generate a random number
 
-//Gem 1
+//Gem Clicks
 $(".gem").on("click", function(){
    var currentGem = $(this).attr("id");
    var userPoints = 0;
@@ -78,7 +78,7 @@ $(".gem").on("click", function(){
         break;
    }
 
-    userGemTotal += userPoints;
+    userGemTotal += userPoints; // additon of clicks
     
     $("#playerScore").text(userGemTotal); //Displays in HTML user's total points
 
@@ -90,54 +90,5 @@ $(".gem").on("click", function(){
         loss();
       } 
   });
-
-/*Gem 2
-$("#pinkGem").on("click", function(){
-    userGemTotal += pinkGem;
-    $("#playerScore").text(userGemTotal);
-
-    // win-loss conditions
-    if (userGemTotal == numToBeMatched){
-        win();
-          }
-
-    if (userGemTotal > numToBeMatched){
-        loss();
-          } 
-   
-  });
-
-//Gem 3
-$("#blueGem").on("click", function(){
-    userGemTotal += blueGem;
-    $("#playerScore").text(userGemTotal);
-
-    // win-loss conditions
-    if (userGemTotal == numToBeMatched){
-        win();
-      }
-    if (userGemTotal > numToBeMatched){
-        loss();
-      } 
-   
-  });
-
-//Gem 4
-$("#orangeGem").on("click", function(){
-    userGemTotal += orangeGem;
-    $("#playerScore").text(userGemTotal);
-
-    // win-loss conditions
-    if (userGemTotal == numToBeMatched){
-        win();
-      }
-    if (userGemTotal > numToBeMatched){
-        loss();
-      }    
-  });
-*/
-
-
-
 
 });
